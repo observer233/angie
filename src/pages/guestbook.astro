@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="留言板 | Ganshuang's Garden">
+  <main class="min-h-screen py-20 bg-[#fdfaf5]">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <div class="mb-12 text-center relative">
+         <span class="text-4xl">✨</span>
+         <h1 class="text-5xl font-bold mt-4 mb-2 tracking-tight text-black">
+           Digital <span class="text-[var(--pink)]">Garden</span> Guestbook
+         </h1>
+         <p class="text-gray-500 italic">“在这里留下你的足迹，或分享一张 AI 的奇思妙想。”</p>
+         <div class="absolute -top-4 -left-4 text-2xl animate-pulse">🌸</div>
+      </div>
+
+      <div class="bg-white/70 backdrop-blur-md border border-black rounded-[32px] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+        
+        <section id="comments">
+          <script src="https://giscus.app/client.js"
+            data-repo="observer233/angie"
+            data-repo-id="R_kgDORpIBzA"
+            data-category="Announcements"
+            data-category-id="DIC_kwDORpIBzM4C4mU5"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="light" 
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+          </script>
+        </section>
+
+      </div>
+
+      <footer class="mt-12 text-center text-sm text-gray-400">
+        © 2026 Ganshuang's Digital Garden • Powered by Giscus
+      </footer>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  /* 针对 Giscus 容器的一些微调，让它更融入背景 */
+  #comments {
+    min-height: 400px;
+  }
+  
+  /* 这里的字体会继承 global.css 中的 Space Grotesk */
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+</style>
